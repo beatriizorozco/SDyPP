@@ -9,7 +9,7 @@ namespace ConsoleApp
         {
             Console.WriteLine("Hello, World!");
             //Recoger un valor de la línea de comando
-            Datetime momentoActual = DateTime.Now;
+            DateTime momentoActual = DateTime.Now;
             string line = Console.ReadLine();
             int elNumero = Convert.ToInt32(line);
             ClassLibrary1.Persona laPersona = new ClassLibrary1.Persona("Marta");
