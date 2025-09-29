@@ -14,7 +14,12 @@ namespace OO1
 
 		private int velocidad = 0;
 
-		public Vehiculo(string laMatricula, string laMarca)
+        public Vehiculo(string laMatricula):
+			this(laMatricula, string.Empty)
+        {
+        }
+
+        public Vehiculo(string laMatricula, string laMarca)
 		{
 			this.Matricula = laMatricula;
 			this.Marca = laMarca;
