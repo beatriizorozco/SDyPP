@@ -38,7 +38,7 @@ namespace OO1
 
         public void Acelerar(int kmPorHora)
         {
-            this.velocidad = this.velocidad + kmPorHora;
+			this.Acelerar(kmPorHora, false);
         }
 
         public void Acelerar(int kmPorHora, bool usarTurbo)
