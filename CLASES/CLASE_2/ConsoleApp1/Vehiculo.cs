@@ -8,21 +8,23 @@ namespace OO1
 {
 	internal class Vehiculo
 	{
+		private static int numVehiculosCreados = 0;
 		private string marca = "Ford";
 
 		public readonly string Matricula;
 
 		private int velocidad = 0;
 
-        public Vehiculo(string laMatricula):
+        internal Vehiculo(string laMatricula):
 			this(laMatricula, string.Empty)
         {
         }
 
-        public Vehiculo(string laMatricula, string laMarca)
+        internal Vehiculo(string laMatricula, string laMarca)
 		{
 			this.Matricula = laMatricula;
 			this.Marca = laMarca;
+			Vehiculo.numVehiculosCreados += 1;
 		}
 
 		internal string Marca
