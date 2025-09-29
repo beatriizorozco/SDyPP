@@ -4,9 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Vehiculo miVehiculo = new Vehiculo();
-            miVehiculo.Marca = "Seat";
-            Console.WriteLine(miVehiculo.Marca);
+            Vehiculo miVehiculo = new Vehiculo("3176-LBZ","Seat");
+            miVehiculo.Marca = "Citroen";
+            miVehiculo.Modelo = "C8";
+            miVehiculo.Acelerar(5, true);
+            Console.WriteLine("Hello, World!");
         }
     }
 }
