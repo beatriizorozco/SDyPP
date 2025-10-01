@@ -1,4 +1,6 @@
-﻿namespace Herencia1
+﻿using System;
+
+namespace Herencia1
 {
     internal class Program
     {

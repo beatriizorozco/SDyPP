@@ -2,3 +2,13 @@ C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\
 C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\Herencia1.AssemblyInfoInputs.cache
 C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\Herencia1.AssemblyInfo.cs
 C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\Herencia1.csproj.CoreCompileInputs.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\bin\Debug\net6.0\Herencia1.exe
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\bin\Debug\net6.0\Herencia1.deps.json
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\bin\Debug\net6.0\Herencia1.runtimeconfig.json
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\bin\Debug\net6.0\Herencia1.dll
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\bin\Debug\net6.0\Herencia1.pdb
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\Herencia1.dll
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\refint\Herencia1.dll
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\Herencia1.pdb
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\Herencia1.genruntimeconfig.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\ref\Herencia1.dll

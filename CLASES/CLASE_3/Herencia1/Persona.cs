@@ -19,7 +19,7 @@ namespace Herencia1
         }
         public virtual void ComunicarIncidencia(string ExplicacionIncidencia) //Virtual -> Clases derivadas van a poder sobreescribirle
         {
-            base.ComunicarIncidencia(ExplicacionIncidencia);
+            //base.ComunicarIncidencia(ExplicacionIncidencia);
             Console.WriteLine($"Comunicar incidencia desde Persona: {this.Nombre}. Explicación: {ExplicacionIncidencia}");
         }
 
