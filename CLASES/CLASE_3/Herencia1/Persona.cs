@@ -8,13 +8,24 @@ namespace Herencia1
         public DateTime FechaNacimiento { get; set; }
         public string DNI { get; set; }
 
+        public Persona()
+        {
+
+        }
+
         public Persona(String elNombre)
         { 
             this.Nombre = elNombre;
         }
-        public void ComunicarIncidencia(string ExplicacionIncidencia)
+        public virtual void ComunicarIncidencia(string ExplicacionIncidencia) //Virtual -> Clases derivadas van a poder sobreescribirle
         {
+            base.ComunicarIncidencia(ExplicacionIncidencia);
             Console.WriteLine($"Comunicar incidencia desde Persona: {this.Nombre}. Explicación: {ExplicacionIncidencia}");
+        }
+
+        public override string ToString()
+        {
+            return this.Nombre;
         }
     }
 }

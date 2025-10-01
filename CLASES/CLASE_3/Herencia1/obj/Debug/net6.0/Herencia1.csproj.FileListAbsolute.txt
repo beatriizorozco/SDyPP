@@ -1,0 +1,4 @@
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\Herencia1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\Herencia1.AssemblyInfoInputs.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\Herencia1.AssemblyInfo.cs
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_3\Herencia1\obj\Debug\net6.0\Herencia1.csproj.CoreCompileInputs.cache
