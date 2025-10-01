@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "CLASES\\CLASE_3\\Ejercicio2\\Program.cs",
               "ToolTip": "C:\\Users\\beatr\\Desktop\\UNEAT\\2_3\u00BA\\1\u00BA\\SD_Y_PP\\SDyPP\\CLASES\\CLASE_3\\Ejercicio2\\Program.cs",
               "RelativeToolTip": "CLASES\\CLASE_3\\Ejercicio2\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-01T08:13:10.628Z",
               "EditorCaption": ""
@@ -45,6 +45,10 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-01T08:13:06.767Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
