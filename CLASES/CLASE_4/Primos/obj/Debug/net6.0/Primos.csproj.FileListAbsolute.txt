@@ -1,0 +1,14 @@
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\obj\Debug\net6.0\Primos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\obj\Debug\net6.0\Primos.AssemblyInfoInputs.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\obj\Debug\net6.0\Primos.AssemblyInfo.cs
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\obj\Debug\net6.0\Primos.csproj.CoreCompileInputs.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\bin\Debug\net6.0\Primos.exe
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\bin\Debug\net6.0\Primos.deps.json
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\bin\Debug\net6.0\Primos.runtimeconfig.json
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\bin\Debug\net6.0\Primos.dll
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\bin\Debug\net6.0\Primos.pdb
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\obj\Debug\net6.0\Primos.dll
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\obj\Debug\net6.0\refint\Primos.dll
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\obj\Debug\net6.0\Primos.pdb
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\obj\Debug\net6.0\Primos.genruntimeconfig.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\Primos\obj\Debug\net6.0\ref\Primos.dll
