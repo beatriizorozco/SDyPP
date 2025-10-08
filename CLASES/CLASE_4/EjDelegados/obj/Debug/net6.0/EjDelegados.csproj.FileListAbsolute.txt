@@ -1,0 +1,14 @@
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\bin\Debug\net6.0\EjDelegados.exe
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\bin\Debug\net6.0\EjDelegados.deps.json
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\bin\Debug\net6.0\EjDelegados.runtimeconfig.json
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\bin\Debug\net6.0\EjDelegados.dll
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\bin\Debug\net6.0\EjDelegados.pdb
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\obj\Debug\net6.0\EjDelegados.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\obj\Debug\net6.0\EjDelegados.AssemblyInfoInputs.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\obj\Debug\net6.0\EjDelegados.AssemblyInfo.cs
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\obj\Debug\net6.0\EjDelegados.csproj.CoreCompileInputs.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\obj\Debug\net6.0\EjDelegados.dll
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\obj\Debug\net6.0\refint\EjDelegados.dll
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\obj\Debug\net6.0\EjDelegados.pdb
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\obj\Debug\net6.0\EjDelegados.genruntimeconfig.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_4\EjDelegados\obj\Debug\net6.0\ref\EjDelegados.dll
