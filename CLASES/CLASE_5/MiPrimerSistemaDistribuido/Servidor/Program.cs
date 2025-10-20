@@ -9,7 +9,9 @@ namespace Servidor
         {
             Console.WriteLine("Programa Cliente...");
             string server = "127.0.0.1";
-            string message = "Hola servidor!";
+            
+            Console.Write("Introduce el mensaje para el servidor: ");
+            string message = Console.ReadLine();
 
             Connect(server, message);
             Console.ReadLine();
