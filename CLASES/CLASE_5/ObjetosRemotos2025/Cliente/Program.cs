@@ -16,11 +16,13 @@ namespace Cliente
             TcpChannel tcpChannel = new TcpChannel();
             ChannelServices.RegisterChannel(tcpChannel);
             Type requiredType = typeof(MovieTicketInterface);
-            MovieTicketInterface remoteObject =
-            (MovieTicketInterface)Activator.GetObject(requiredType,
-            "tcp://localhost:9998/MovieTicketBooking");
+            MovieTicketInterface remoteObject = (MovieTicketInterface)Activator.GetObject(requiredType, "tcp://localhost:9998/MovieTicketBooking");
             Console.WriteLine(remoteObject.GetTicketStatus("Ticket No: 3344"));
             Console.ReadLine();
+        }
+        public interface MovieTicketInterface
+        {
+            string GetTicketStatus(string stringToPrint);
         }
     }
 }
