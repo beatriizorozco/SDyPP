@@ -13,6 +13,8 @@ namespace Cliente
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Cliente arrancado.");
+
             TcpChannel tcpChannel = new TcpChannel();
             ChannelServices.RegisterChannel(tcpChannel);
             Type requiredType = typeof(MovieTicketInterface);
