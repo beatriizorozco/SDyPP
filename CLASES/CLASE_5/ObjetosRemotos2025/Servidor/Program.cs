@@ -25,7 +25,7 @@ namespace Servidor
             ChannelServices.RegisterChannel(tcpChannel);
             Type commonInterfaceType = typeof(MovieTicket);
             RemotingConfiguration.RegisterWellKnownServiceType(commonInterfaceType,
-            "MovieTicketBooking", WellKnownObjectMode.Singleton);
+            "MovieTicketBooking", WellKnownObjectMode.SingleCall);
             System.Console.WriteLine("Press ENTER to quitnn");
             System.Console.ReadLine();
         }
