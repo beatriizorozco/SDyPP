@@ -1,0 +1,7 @@
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_5\ObjetosRemotos2025\Servidor\bin\Debug\Servidor.exe.config
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_5\ObjetosRemotos2025\Servidor\bin\Debug\Servidor.exe
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_5\ObjetosRemotos2025\Servidor\bin\Debug\Servidor.pdb
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_5\ObjetosRemotos2025\Servidor\obj\Debug\Servidor.csproj.AssemblyReference.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_5\ObjetosRemotos2025\Servidor\obj\Debug\Servidor.csproj.CoreCompileInputs.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_5\ObjetosRemotos2025\Servidor\obj\Debug\Servidor.exe
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_5\ObjetosRemotos2025\Servidor\obj\Debug\Servidor.pdb

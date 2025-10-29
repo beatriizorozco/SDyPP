@@ -15,6 +15,7 @@ namespace Servidor
         static void Main(string[] args)
         {
             TicketServer();
+            Console.ReadLine();
         }
 
         static void TicketServer()
@@ -22,9 +23,9 @@ namespace Servidor
             Console.WriteLine("Ticket Server started...");
             TcpChannel tcpChannel = new TcpChannel(9998);
             ChannelServices.RegisterChannel(tcpChannel);
-            Type commonInterfaceType = Type.GetType("Servidor.MovieTicket");
+            Type commonInterfaceType = typeof(MovieTicket);
             RemotingConfiguration.RegisterWellKnownServiceType(commonInterfaceType,
-            "MovieTicketBooking", WellKnownObjectMode.SingleCall);
+            "MovieTicketBooking", WellKnownObjectMode.Singleton);
             System.Console.WriteLine("Press ENTER to quitnn");
             System.Console.ReadLine();
         }
