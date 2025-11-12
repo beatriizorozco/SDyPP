@@ -1,0 +1,5 @@
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_6\SolucionSoapDemoApp\SoapDemoApp\obj\Debug\SoapDemoApp.csproj.AssemblyReference.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_6\SolucionSoapDemoApp\SoapDemoApp\obj\Debug\SoapDemoApp.Form1.resources
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_6\SolucionSoapDemoApp\SoapDemoApp\obj\Debug\SoapDemoApp.Properties.Resources.resources
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_6\SolucionSoapDemoApp\SoapDemoApp\obj\Debug\SoapDemoApp.csproj.GenerateResource.cache
+C:\Users\beatriz.orozco\Desktop\SDyPP\CLASES\CLASE_6\SolucionSoapDemoApp\SoapDemoApp\obj\Debug\SoapDemoApp.csproj.CoreCompileInputs.cache

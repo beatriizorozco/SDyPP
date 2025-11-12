@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System;
 using System.Windows.Forms;
-using SoapDemoApp.SoapDemoService; 
+using SoapDemoApp.SoapDemoService;
 
 namespace SoapDemoApp
 {
@@ -19,66 +19,158 @@ namespace SoapDemoApp
         public Form1()
         {
             InitializeComponent();
-            client = new SOAPDemoSoapClient();
+            client = new SOAPDemoSoapClient();   // SIN "Dot"
         }
 
-        private void btnSayHello_Click(object sender, EventArgs e)
+        private async void btnSayHello_Click(object sender, EventArgs e)
         {
-            string name = txtInput.Text;
-            string result = client.SayHello(name);
-            lstOutput.Items.Add($"SayHello('{name}') → {result}");
+            try
+            {
+                string name = txtInput.Text;
+                string result = await Task.Run(() => client.SayHello(name));
+                lstOutput.Items.Add($"SayHello('{name}') → {result}");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void btnAddInteger_Click(object sender, EventArgs e)
+        private async void btnAddInteger_Click(object sender, EventArgs e)
         {
-            var result = client.AddInteger(5, 7);
-            lstOutput.Items.Add($"AddInteger(5,7) → {result}");
+            try
+            {
+                long a = 5, b = 7;
+                long sum = await Task.Run(() => client.AddInteger(a, b)); // long
+                lstOutput.Items.Add($"AddInteger({a},{b}) → {sum}");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void btnDivide_Click(object sender, EventArgs e)
+        private async void btnDivide_Click(object sender, EventArgs e)
         {
-            var result = client.DivideInteger(20, 3);
-            lstOutput.Items.Add($"DivideInteger(20,3) → Quotient={result.Quotient}, Remainder={result.Remainder}");
+            try
+            {
+                long a = 20, b = 3;
+                long div = await Task.Run(() => client.DivideInteger(a, b)); // long
+                lstOutput.Items.Add($"DivideInteger({a},{b}) → {div}");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void btnReverse_Click(object sender, EventArgs e)
+        private async void btnLookupCity_Click(object sender, EventArgs e)
         {
-            string input = txtInput.Text;
-            string result = client.ReverseString(input);
-            lstOutput.Items.Add($"ReverseString('{input}') → {result}");
+            try
+            {
+                string zip = txtInput.Text;
+                var addr = await Task.Run(() => client.LookupCity(zip)); // Address
+                lstOutput.Items.Add("LookupCity → " + DumpObject(addr));
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void btnMission_Click(object sender, EventArgs e)
+        private async void btnGetByName_Click(object sender, EventArgs e)
         {
-            lstOutput.Items.Add($"Mission → {client.Mission()}");
+            try
+            {
+                var ds = await Task.Run(() => client.GetByName(txtInput.Text)); // DataSet
+                lstOutput.Items.Add("GetByName → " + DumpDataSet(ds));
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void btnSystemInfo_Click(object sender, EventArgs e)
+        private async void btnFindPerson_Click(object sender, EventArgs e)
         {
-            lstOutput.Items.Add($"SystemInfo → {client.SystemInfo()}");
+            try
+            {
+                var p = await Task.Run(() => client.FindPerson(5)); // Person-like
+                lstOutput.Items.Add("FindPerson → " + DumpObject(p));
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void btnLookupCity_Click(object sender, EventArgs e)
+        private async void btnGetListByName_Click(object sender, EventArgs e)
         {
-            string zip = txtInput.Text;
-            lstOutput.Items.Add($"LookupCity('{zip}') → {client.LookupCity(zip)}");
+            try
+            {
+                var list = await Task.Run(() => client.GetListByName(txtInput.Text)); // array/list
+                // Imprime elementos de la lista
+                if (list == null) { lstOutput.Items.Add("GetListByName → (null)"); return; }
+                var pretty = string.Join(" | ", list.Select(DumpObject));
+                lstOutput.Items.Add("GetListByName → " + pretty);
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void btnFindPerson_Click(object sender, EventArgs e)
+        private async void btnGetDataSetByName_Click(object sender, EventArgs e)
         {
-            var person = client.FindPerson(5);
-            lstOutput.Items.Add($"FindPerson(5) → {person.Name}, {person.Title}");
+            try
+            {
+                var ds = await Task.Run(() => client.GetDataSetByName(txtInput.Text)); // DataSet
+                lstOutput.Items.Add("GetDataSetByName → " + DumpDataSet(ds));
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void btnGetByName_Click(object sender, EventArgs e)
+        private async void btnQueryByName_Click(object sender, EventArgs e)
         {
-            var person = client.GetByName(txtInput.Text);
-            lstOutput.Items.Add($"GetByName('{txtInput.Text}') → {person.Name}, {person.Title}");
+            try
+            {
+                var ds = await Task.Run(() => client.QueryByName(txtInput.Text)); // DataSet
+                lstOutput.Items.Add("QueryByName → " + DumpDataSet(ds));
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private async void btnMission_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string result = await Task.Run(() => client.Mission());
+                lstOutput.Items.Add($"Mission → {result}");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             lstOutput.Items.Clear();
+        }
+
+        // ===== Helpers =====
+
+        private static string DumpObject(object obj)
+        {
+            if (obj == null) return "(null)";
+            var t = obj.GetType();
+            var props = t.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            if (props.Length == 0) return obj.ToString();
+            var sb = new StringBuilder();
+            sb.Append('{');
+            sb.Append(string.Join(", ", props.Select(p =>
+            {
+                object v;
+                try { v = p.GetValue(obj); } catch { v = "(error)"; }
+                return $"{p.Name}={v}";
+            })));
+            sb.Append('}');
+            return sb.ToString();
+        }
+
+        private static string DumpDataSet(DataSet ds, int maxRowsPerTable = 3)
+        {
+            if (ds == null) return "(null DataSet)";
+            var sb = new StringBuilder();
+            foreach (DataTable tbl in ds.Tables)
+            {
+                sb.Append($"[Table {tbl.TableName}]");
+                var rows = tbl.Rows.Cast<DataRow>().Take(maxRowsPerTable);
+                foreach (var r in rows)
+                {
+                    var cells = tbl.Columns.Cast<DataColumn>()
+                         .Select(c => $"{c.ColumnName}={r[c]}");
+                    sb.Append(" { " + string.Join(", ", cells) + " }");
+                }
+                sb.Append("  ");
+            }
+            return sb.ToString();
         }
     }
 }

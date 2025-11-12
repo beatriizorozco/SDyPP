@@ -20,64 +20,82 @@ namespace SoapDemoApp.SoapDemoService {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         long AddInteger(long Arg1, long Arg2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.AddInteger", ReplyAction="*")]
-        System.Threading.Tasks.Task<long> AddIntegerAsync(long Arg1, long Arg2);
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/SOAP.Demo.AddInteger", ReplyAction="*")]
+        System.IAsyncResult BeginAddInteger(long Arg1, long Arg2, System.AsyncCallback callback, object asyncState);
+        
+        long EndAddInteger(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.DivideInteger", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         long DivideInteger(long Arg1, long Arg2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.DivideInteger", ReplyAction="*")]
-        System.Threading.Tasks.Task<long> DivideIntegerAsync(long Arg1, long Arg2);
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/SOAP.Demo.DivideInteger", ReplyAction="*")]
+        System.IAsyncResult BeginDivideInteger(long Arg1, long Arg2, System.AsyncCallback callback, object asyncState);
+        
+        long EndDivideInteger(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.FindPerson", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         SoapDemoApp.SoapDemoService.Person FindPerson(string id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.FindPerson", ReplyAction="*")]
-        System.Threading.Tasks.Task<SoapDemoApp.SoapDemoService.Person> FindPersonAsync(string id);
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/SOAP.Demo.FindPerson", ReplyAction="*")]
+        System.IAsyncResult BeginFindPerson(string id, System.AsyncCallback callback, object asyncState);
+        
+        SoapDemoApp.SoapDemoService.Person EndFindPerson(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.GetByName", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet GetByName(string name);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.GetByName", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> GetByNameAsync(string name);
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/SOAP.Demo.GetByName", ReplyAction="*")]
+        System.IAsyncResult BeginGetByName(string name, System.AsyncCallback callback, object asyncState);
+        
+        System.Data.DataSet EndGetByName(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.GetDataSetByName", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         SoapDemoApp.SoapDemoService.ByNameDataSet GetDataSetByName(string name);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.GetDataSetByName", ReplyAction="*")]
-        System.Threading.Tasks.Task<SoapDemoApp.SoapDemoService.ByNameDataSet> GetDataSetByNameAsync(string name);
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/SOAP.Demo.GetDataSetByName", ReplyAction="*")]
+        System.IAsyncResult BeginGetDataSetByName(string name, System.AsyncCallback callback, object asyncState);
+        
+        SoapDemoApp.SoapDemoService.ByNameDataSet EndGetDataSetByName(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.GetListByName", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         SoapDemoApp.SoapDemoService.PersonIdentification[] GetListByName(string name);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.GetListByName", ReplyAction="*")]
-        System.Threading.Tasks.Task<SoapDemoApp.SoapDemoService.PersonIdentification[]> GetListByNameAsync(string name);
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/SOAP.Demo.GetListByName", ReplyAction="*")]
+        System.IAsyncResult BeginGetListByName(string name, System.AsyncCallback callback, object asyncState);
+        
+        SoapDemoApp.SoapDemoService.PersonIdentification[] EndGetListByName(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.LookupCity", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         SoapDemoApp.SoapDemoService.Address LookupCity(string zip);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.LookupCity", ReplyAction="*")]
-        System.Threading.Tasks.Task<SoapDemoApp.SoapDemoService.Address> LookupCityAsync(string zip);
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/SOAP.Demo.LookupCity", ReplyAction="*")]
+        System.IAsyncResult BeginLookupCity(string zip, System.AsyncCallback callback, object asyncState);
+        
+        SoapDemoApp.SoapDemoService.Address EndLookupCity(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.Mission", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         string Mission();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.Mission", ReplyAction="*")]
-        System.Threading.Tasks.Task<string> MissionAsync();
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/SOAP.Demo.Mission", ReplyAction="*")]
+        System.IAsyncResult BeginMission(System.AsyncCallback callback, object asyncState);
+        
+        string EndMission(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.QueryByName", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         SoapDemoApp.SoapDemoService.QueryByName_DataSet QueryByName(string name);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAP.Demo.QueryByName", ReplyAction="*")]
-        System.Threading.Tasks.Task<SoapDemoApp.SoapDemoService.QueryByName_DataSet> QueryByNameAsync(string name);
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/SOAP.Demo.QueryByName", ReplyAction="*")]
+        System.IAsyncResult BeginQueryByName(string name, System.AsyncCallback callback, object asyncState);
+        
+        SoapDemoApp.SoapDemoService.QueryByName_DataSet EndQueryByName(System.IAsyncResult result);
     }
     
     /// <remarks/>
@@ -1899,7 +1917,232 @@ namespace SoapDemoApp.SoapDemoService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class AddIntegerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public AddIntegerCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public long Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((long)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class DivideIntegerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public DivideIntegerCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public long Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((long)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class FindPersonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public FindPersonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public SoapDemoApp.SoapDemoService.Person Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((SoapDemoApp.SoapDemoService.Person)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class GetByNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public GetByNameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Data.DataSet Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class GetDataSetByNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public GetDataSetByNameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public SoapDemoApp.SoapDemoService.ByNameDataSet Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((SoapDemoApp.SoapDemoService.ByNameDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class GetListByNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public GetListByNameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public SoapDemoApp.SoapDemoService.PersonIdentification[] Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((SoapDemoApp.SoapDemoService.PersonIdentification[])(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class LookupCityCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public LookupCityCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public SoapDemoApp.SoapDemoService.Address Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((SoapDemoApp.SoapDemoService.Address)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class MissionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public MissionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class QueryByNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public QueryByNameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public SoapDemoApp.SoapDemoService.QueryByName_DataSet Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((SoapDemoApp.SoapDemoService.QueryByName_DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class SOAPDemoSoapClient : System.ServiceModel.ClientBase<SoapDemoApp.SoapDemoService.SOAPDemoSoap>, SoapDemoApp.SoapDemoService.SOAPDemoSoap {
+        
+        private BeginOperationDelegate onBeginAddIntegerDelegate;
+        
+        private EndOperationDelegate onEndAddIntegerDelegate;
+        
+        private System.Threading.SendOrPostCallback onAddIntegerCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginDivideIntegerDelegate;
+        
+        private EndOperationDelegate onEndDivideIntegerDelegate;
+        
+        private System.Threading.SendOrPostCallback onDivideIntegerCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginFindPersonDelegate;
+        
+        private EndOperationDelegate onEndFindPersonDelegate;
+        
+        private System.Threading.SendOrPostCallback onFindPersonCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginGetByNameDelegate;
+        
+        private EndOperationDelegate onEndGetByNameDelegate;
+        
+        private System.Threading.SendOrPostCallback onGetByNameCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginGetDataSetByNameDelegate;
+        
+        private EndOperationDelegate onEndGetDataSetByNameDelegate;
+        
+        private System.Threading.SendOrPostCallback onGetDataSetByNameCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginGetListByNameDelegate;
+        
+        private EndOperationDelegate onEndGetListByNameDelegate;
+        
+        private System.Threading.SendOrPostCallback onGetListByNameCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginLookupCityDelegate;
+        
+        private EndOperationDelegate onEndLookupCityDelegate;
+        
+        private System.Threading.SendOrPostCallback onLookupCityCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginMissionDelegate;
+        
+        private EndOperationDelegate onEndMissionDelegate;
+        
+        private System.Threading.SendOrPostCallback onMissionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginQueryByNameDelegate;
+        
+        private EndOperationDelegate onEndQueryByNameDelegate;
+        
+        private System.Threading.SendOrPostCallback onQueryByNameCompletedDelegate;
         
         public SOAPDemoSoapClient() {
         }
@@ -1920,76 +2163,474 @@ namespace SoapDemoApp.SoapDemoService {
                 base(binding, remoteAddress) {
         }
         
+        public event System.EventHandler<AddIntegerCompletedEventArgs> AddIntegerCompleted;
+        
+        public event System.EventHandler<DivideIntegerCompletedEventArgs> DivideIntegerCompleted;
+        
+        public event System.EventHandler<FindPersonCompletedEventArgs> FindPersonCompleted;
+        
+        public event System.EventHandler<GetByNameCompletedEventArgs> GetByNameCompleted;
+        
+        public event System.EventHandler<GetDataSetByNameCompletedEventArgs> GetDataSetByNameCompleted;
+        
+        public event System.EventHandler<GetListByNameCompletedEventArgs> GetListByNameCompleted;
+        
+        public event System.EventHandler<LookupCityCompletedEventArgs> LookupCityCompleted;
+        
+        public event System.EventHandler<MissionCompletedEventArgs> MissionCompleted;
+        
+        public event System.EventHandler<QueryByNameCompletedEventArgs> QueryByNameCompleted;
+        
         public long AddInteger(long Arg1, long Arg2) {
             return base.Channel.AddInteger(Arg1, Arg2);
         }
         
-        public System.Threading.Tasks.Task<long> AddIntegerAsync(long Arg1, long Arg2) {
-            return base.Channel.AddIntegerAsync(Arg1, Arg2);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginAddInteger(long Arg1, long Arg2, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginAddInteger(Arg1, Arg2, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public long EndAddInteger(System.IAsyncResult result) {
+            return base.Channel.EndAddInteger(result);
+        }
+        
+        private System.IAsyncResult OnBeginAddInteger(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            long Arg1 = ((long)(inValues[0]));
+            long Arg2 = ((long)(inValues[1]));
+            return this.BeginAddInteger(Arg1, Arg2, callback, asyncState);
+        }
+        
+        private object[] OnEndAddInteger(System.IAsyncResult result) {
+            long retVal = this.EndAddInteger(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnAddIntegerCompleted(object state) {
+            if ((this.AddIntegerCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.AddIntegerCompleted(this, new AddIntegerCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void AddIntegerAsync(long Arg1, long Arg2) {
+            this.AddIntegerAsync(Arg1, Arg2, null);
+        }
+        
+        public void AddIntegerAsync(long Arg1, long Arg2, object userState) {
+            if ((this.onBeginAddIntegerDelegate == null)) {
+                this.onBeginAddIntegerDelegate = new BeginOperationDelegate(this.OnBeginAddInteger);
+            }
+            if ((this.onEndAddIntegerDelegate == null)) {
+                this.onEndAddIntegerDelegate = new EndOperationDelegate(this.OnEndAddInteger);
+            }
+            if ((this.onAddIntegerCompletedDelegate == null)) {
+                this.onAddIntegerCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnAddIntegerCompleted);
+            }
+            base.InvokeAsync(this.onBeginAddIntegerDelegate, new object[] {
+                        Arg1,
+                        Arg2}, this.onEndAddIntegerDelegate, this.onAddIntegerCompletedDelegate, userState);
         }
         
         public long DivideInteger(long Arg1, long Arg2) {
             return base.Channel.DivideInteger(Arg1, Arg2);
         }
         
-        public System.Threading.Tasks.Task<long> DivideIntegerAsync(long Arg1, long Arg2) {
-            return base.Channel.DivideIntegerAsync(Arg1, Arg2);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginDivideInteger(long Arg1, long Arg2, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginDivideInteger(Arg1, Arg2, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public long EndDivideInteger(System.IAsyncResult result) {
+            return base.Channel.EndDivideInteger(result);
+        }
+        
+        private System.IAsyncResult OnBeginDivideInteger(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            long Arg1 = ((long)(inValues[0]));
+            long Arg2 = ((long)(inValues[1]));
+            return this.BeginDivideInteger(Arg1, Arg2, callback, asyncState);
+        }
+        
+        private object[] OnEndDivideInteger(System.IAsyncResult result) {
+            long retVal = this.EndDivideInteger(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnDivideIntegerCompleted(object state) {
+            if ((this.DivideIntegerCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.DivideIntegerCompleted(this, new DivideIntegerCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void DivideIntegerAsync(long Arg1, long Arg2) {
+            this.DivideIntegerAsync(Arg1, Arg2, null);
+        }
+        
+        public void DivideIntegerAsync(long Arg1, long Arg2, object userState) {
+            if ((this.onBeginDivideIntegerDelegate == null)) {
+                this.onBeginDivideIntegerDelegate = new BeginOperationDelegate(this.OnBeginDivideInteger);
+            }
+            if ((this.onEndDivideIntegerDelegate == null)) {
+                this.onEndDivideIntegerDelegate = new EndOperationDelegate(this.OnEndDivideInteger);
+            }
+            if ((this.onDivideIntegerCompletedDelegate == null)) {
+                this.onDivideIntegerCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnDivideIntegerCompleted);
+            }
+            base.InvokeAsync(this.onBeginDivideIntegerDelegate, new object[] {
+                        Arg1,
+                        Arg2}, this.onEndDivideIntegerDelegate, this.onDivideIntegerCompletedDelegate, userState);
         }
         
         public SoapDemoApp.SoapDemoService.Person FindPerson(string id) {
             return base.Channel.FindPerson(id);
         }
         
-        public System.Threading.Tasks.Task<SoapDemoApp.SoapDemoService.Person> FindPersonAsync(string id) {
-            return base.Channel.FindPersonAsync(id);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginFindPerson(string id, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginFindPerson(id, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public SoapDemoApp.SoapDemoService.Person EndFindPerson(System.IAsyncResult result) {
+            return base.Channel.EndFindPerson(result);
+        }
+        
+        private System.IAsyncResult OnBeginFindPerson(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string id = ((string)(inValues[0]));
+            return this.BeginFindPerson(id, callback, asyncState);
+        }
+        
+        private object[] OnEndFindPerson(System.IAsyncResult result) {
+            SoapDemoApp.SoapDemoService.Person retVal = this.EndFindPerson(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnFindPersonCompleted(object state) {
+            if ((this.FindPersonCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.FindPersonCompleted(this, new FindPersonCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void FindPersonAsync(string id) {
+            this.FindPersonAsync(id, null);
+        }
+        
+        public void FindPersonAsync(string id, object userState) {
+            if ((this.onBeginFindPersonDelegate == null)) {
+                this.onBeginFindPersonDelegate = new BeginOperationDelegate(this.OnBeginFindPerson);
+            }
+            if ((this.onEndFindPersonDelegate == null)) {
+                this.onEndFindPersonDelegate = new EndOperationDelegate(this.OnEndFindPerson);
+            }
+            if ((this.onFindPersonCompletedDelegate == null)) {
+                this.onFindPersonCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnFindPersonCompleted);
+            }
+            base.InvokeAsync(this.onBeginFindPersonDelegate, new object[] {
+                        id}, this.onEndFindPersonDelegate, this.onFindPersonCompletedDelegate, userState);
         }
         
         public System.Data.DataSet GetByName(string name) {
             return base.Channel.GetByName(name);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> GetByNameAsync(string name) {
-            return base.Channel.GetByNameAsync(name);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginGetByName(string name, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginGetByName(name, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.Data.DataSet EndGetByName(System.IAsyncResult result) {
+            return base.Channel.EndGetByName(result);
+        }
+        
+        private System.IAsyncResult OnBeginGetByName(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string name = ((string)(inValues[0]));
+            return this.BeginGetByName(name, callback, asyncState);
+        }
+        
+        private object[] OnEndGetByName(System.IAsyncResult result) {
+            System.Data.DataSet retVal = this.EndGetByName(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnGetByNameCompleted(object state) {
+            if ((this.GetByNameCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetByNameCompleted(this, new GetByNameCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void GetByNameAsync(string name) {
+            this.GetByNameAsync(name, null);
+        }
+        
+        public void GetByNameAsync(string name, object userState) {
+            if ((this.onBeginGetByNameDelegate == null)) {
+                this.onBeginGetByNameDelegate = new BeginOperationDelegate(this.OnBeginGetByName);
+            }
+            if ((this.onEndGetByNameDelegate == null)) {
+                this.onEndGetByNameDelegate = new EndOperationDelegate(this.OnEndGetByName);
+            }
+            if ((this.onGetByNameCompletedDelegate == null)) {
+                this.onGetByNameCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetByNameCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetByNameDelegate, new object[] {
+                        name}, this.onEndGetByNameDelegate, this.onGetByNameCompletedDelegate, userState);
         }
         
         public SoapDemoApp.SoapDemoService.ByNameDataSet GetDataSetByName(string name) {
             return base.Channel.GetDataSetByName(name);
         }
         
-        public System.Threading.Tasks.Task<SoapDemoApp.SoapDemoService.ByNameDataSet> GetDataSetByNameAsync(string name) {
-            return base.Channel.GetDataSetByNameAsync(name);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginGetDataSetByName(string name, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginGetDataSetByName(name, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public SoapDemoApp.SoapDemoService.ByNameDataSet EndGetDataSetByName(System.IAsyncResult result) {
+            return base.Channel.EndGetDataSetByName(result);
+        }
+        
+        private System.IAsyncResult OnBeginGetDataSetByName(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string name = ((string)(inValues[0]));
+            return this.BeginGetDataSetByName(name, callback, asyncState);
+        }
+        
+        private object[] OnEndGetDataSetByName(System.IAsyncResult result) {
+            SoapDemoApp.SoapDemoService.ByNameDataSet retVal = this.EndGetDataSetByName(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnGetDataSetByNameCompleted(object state) {
+            if ((this.GetDataSetByNameCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetDataSetByNameCompleted(this, new GetDataSetByNameCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void GetDataSetByNameAsync(string name) {
+            this.GetDataSetByNameAsync(name, null);
+        }
+        
+        public void GetDataSetByNameAsync(string name, object userState) {
+            if ((this.onBeginGetDataSetByNameDelegate == null)) {
+                this.onBeginGetDataSetByNameDelegate = new BeginOperationDelegate(this.OnBeginGetDataSetByName);
+            }
+            if ((this.onEndGetDataSetByNameDelegate == null)) {
+                this.onEndGetDataSetByNameDelegate = new EndOperationDelegate(this.OnEndGetDataSetByName);
+            }
+            if ((this.onGetDataSetByNameCompletedDelegate == null)) {
+                this.onGetDataSetByNameCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetDataSetByNameCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetDataSetByNameDelegate, new object[] {
+                        name}, this.onEndGetDataSetByNameDelegate, this.onGetDataSetByNameCompletedDelegate, userState);
         }
         
         public SoapDemoApp.SoapDemoService.PersonIdentification[] GetListByName(string name) {
             return base.Channel.GetListByName(name);
         }
         
-        public System.Threading.Tasks.Task<SoapDemoApp.SoapDemoService.PersonIdentification[]> GetListByNameAsync(string name) {
-            return base.Channel.GetListByNameAsync(name);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginGetListByName(string name, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginGetListByName(name, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public SoapDemoApp.SoapDemoService.PersonIdentification[] EndGetListByName(System.IAsyncResult result) {
+            return base.Channel.EndGetListByName(result);
+        }
+        
+        private System.IAsyncResult OnBeginGetListByName(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string name = ((string)(inValues[0]));
+            return this.BeginGetListByName(name, callback, asyncState);
+        }
+        
+        private object[] OnEndGetListByName(System.IAsyncResult result) {
+            SoapDemoApp.SoapDemoService.PersonIdentification[] retVal = this.EndGetListByName(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnGetListByNameCompleted(object state) {
+            if ((this.GetListByNameCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetListByNameCompleted(this, new GetListByNameCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void GetListByNameAsync(string name) {
+            this.GetListByNameAsync(name, null);
+        }
+        
+        public void GetListByNameAsync(string name, object userState) {
+            if ((this.onBeginGetListByNameDelegate == null)) {
+                this.onBeginGetListByNameDelegate = new BeginOperationDelegate(this.OnBeginGetListByName);
+            }
+            if ((this.onEndGetListByNameDelegate == null)) {
+                this.onEndGetListByNameDelegate = new EndOperationDelegate(this.OnEndGetListByName);
+            }
+            if ((this.onGetListByNameCompletedDelegate == null)) {
+                this.onGetListByNameCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetListByNameCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetListByNameDelegate, new object[] {
+                        name}, this.onEndGetListByNameDelegate, this.onGetListByNameCompletedDelegate, userState);
         }
         
         public SoapDemoApp.SoapDemoService.Address LookupCity(string zip) {
             return base.Channel.LookupCity(zip);
         }
         
-        public System.Threading.Tasks.Task<SoapDemoApp.SoapDemoService.Address> LookupCityAsync(string zip) {
-            return base.Channel.LookupCityAsync(zip);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginLookupCity(string zip, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginLookupCity(zip, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public SoapDemoApp.SoapDemoService.Address EndLookupCity(System.IAsyncResult result) {
+            return base.Channel.EndLookupCity(result);
+        }
+        
+        private System.IAsyncResult OnBeginLookupCity(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string zip = ((string)(inValues[0]));
+            return this.BeginLookupCity(zip, callback, asyncState);
+        }
+        
+        private object[] OnEndLookupCity(System.IAsyncResult result) {
+            SoapDemoApp.SoapDemoService.Address retVal = this.EndLookupCity(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnLookupCityCompleted(object state) {
+            if ((this.LookupCityCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.LookupCityCompleted(this, new LookupCityCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void LookupCityAsync(string zip) {
+            this.LookupCityAsync(zip, null);
+        }
+        
+        public void LookupCityAsync(string zip, object userState) {
+            if ((this.onBeginLookupCityDelegate == null)) {
+                this.onBeginLookupCityDelegate = new BeginOperationDelegate(this.OnBeginLookupCity);
+            }
+            if ((this.onEndLookupCityDelegate == null)) {
+                this.onEndLookupCityDelegate = new EndOperationDelegate(this.OnEndLookupCity);
+            }
+            if ((this.onLookupCityCompletedDelegate == null)) {
+                this.onLookupCityCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnLookupCityCompleted);
+            }
+            base.InvokeAsync(this.onBeginLookupCityDelegate, new object[] {
+                        zip}, this.onEndLookupCityDelegate, this.onLookupCityCompletedDelegate, userState);
         }
         
         public string Mission() {
             return base.Channel.Mission();
         }
         
-        public System.Threading.Tasks.Task<string> MissionAsync() {
-            return base.Channel.MissionAsync();
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginMission(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginMission(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndMission(System.IAsyncResult result) {
+            return base.Channel.EndMission(result);
+        }
+        
+        private System.IAsyncResult OnBeginMission(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return this.BeginMission(callback, asyncState);
+        }
+        
+        private object[] OnEndMission(System.IAsyncResult result) {
+            string retVal = this.EndMission(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnMissionCompleted(object state) {
+            if ((this.MissionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.MissionCompleted(this, new MissionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void MissionAsync() {
+            this.MissionAsync(null);
+        }
+        
+        public void MissionAsync(object userState) {
+            if ((this.onBeginMissionDelegate == null)) {
+                this.onBeginMissionDelegate = new BeginOperationDelegate(this.OnBeginMission);
+            }
+            if ((this.onEndMissionDelegate == null)) {
+                this.onEndMissionDelegate = new EndOperationDelegate(this.OnEndMission);
+            }
+            if ((this.onMissionCompletedDelegate == null)) {
+                this.onMissionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnMissionCompleted);
+            }
+            base.InvokeAsync(this.onBeginMissionDelegate, null, this.onEndMissionDelegate, this.onMissionCompletedDelegate, userState);
         }
         
         public SoapDemoApp.SoapDemoService.QueryByName_DataSet QueryByName(string name) {
             return base.Channel.QueryByName(name);
         }
         
-        public System.Threading.Tasks.Task<SoapDemoApp.SoapDemoService.QueryByName_DataSet> QueryByNameAsync(string name) {
-            return base.Channel.QueryByNameAsync(name);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginQueryByName(string name, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginQueryByName(name, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public SoapDemoApp.SoapDemoService.QueryByName_DataSet EndQueryByName(System.IAsyncResult result) {
+            return base.Channel.EndQueryByName(result);
+        }
+        
+        private System.IAsyncResult OnBeginQueryByName(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string name = ((string)(inValues[0]));
+            return this.BeginQueryByName(name, callback, asyncState);
+        }
+        
+        private object[] OnEndQueryByName(System.IAsyncResult result) {
+            SoapDemoApp.SoapDemoService.QueryByName_DataSet retVal = this.EndQueryByName(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnQueryByNameCompleted(object state) {
+            if ((this.QueryByNameCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.QueryByNameCompleted(this, new QueryByNameCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void QueryByNameAsync(string name) {
+            this.QueryByNameAsync(name, null);
+        }
+        
+        public void QueryByNameAsync(string name, object userState) {
+            if ((this.onBeginQueryByNameDelegate == null)) {
+                this.onBeginQueryByNameDelegate = new BeginOperationDelegate(this.OnBeginQueryByName);
+            }
+            if ((this.onEndQueryByNameDelegate == null)) {
+                this.onEndQueryByNameDelegate = new EndOperationDelegate(this.OnEndQueryByName);
+            }
+            if ((this.onQueryByNameCompletedDelegate == null)) {
+                this.onQueryByNameCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnQueryByNameCompleted);
+            }
+            base.InvokeAsync(this.onBeginQueryByNameDelegate, new object[] {
+                        name}, this.onEndQueryByNameDelegate, this.onQueryByNameCompletedDelegate, userState);
         }
     }
 }
