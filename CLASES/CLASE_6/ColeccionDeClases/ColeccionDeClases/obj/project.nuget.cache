@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "6MPwPl4vGz7VWTyuBBN7t0cvqqJZq9WlPhf1ENhLgA7r9xFMb10AF3/zlbBDIkrD0ukfd2gzGUVB1/ki+PAkdw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\beatriz.orozco\\Desktop\\SDyPP\\CLASES\\CLASE_6\\ColeccionDeClases\\ColeccionDeClases\\ColeccionDeClases.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\beatriz.orozco\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
+    "C:\\Users\\beatriz.orozco\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\beatriz.orozco\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\beatriz.orozco\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\beatriz.orozco\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\beatriz.orozco\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\beatriz.orozco\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
